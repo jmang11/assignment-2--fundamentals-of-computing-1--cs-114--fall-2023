@@ -11,14 +11,14 @@ public class Diamond {
     int count = 1;
     if(i % 2 == 0){     //Identify even input
       count -= 1;
-      for(int a = count; a <= i; a++){
-        for(int b = count; b <= (i -(i/2)); b++){
+      for(int a = count; a <= i; a++){       //Controls beginning and end of diamond (vertically)
+        for(int b = count; b <= (i -(i/2)); b++){      //Controls beginning and end of diamond (horizontally)
           System.out.print("  ");
         }
-        for(int c = 1; c <= count * 2; c++){
+        for(int c = 1; c <= count * 2; c++){      //Prints characters in diamond
           System.out.print(" *");
         }
-        for(int d = count; d < i - (i-1); d++){
+        for(int d = count; d < i - (i-1); d++){      //Creates top and bottom tip of diamond
           System.out.print("*");
         }
         if(a < (i -(i/2))){
@@ -34,12 +34,12 @@ public class Diamond {
     }
 
     }
-    else{     //Identify odd input
-      for(int a = 1; a <= i; a++){
-        for(int b = count; b <= i - 1; b++){
+    else{       //Identify odd input
+      for(int a = 1; a <= i; a++){         //Controls beginning and end of diamond (vertically)
+        for(int b = count; b <= i - 1; b++){       //Controls beginning and end of diamond (horizontally)
           System.out.print(" ");
         }
-        for(int c = 1; c <= count * 2 - 1; c++){
+        for(int c = 1; c <= count * 2 - 1; c++){       //Prints characters in diamond
           System.out.print("*");
         }
         if(a < (i -(i/2))){
